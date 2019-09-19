@@ -1,0 +1,42 @@
+.wrapper {
+  margin: 50px auto;
+  width: 65%;
+  color: #494E61;
+
+  &__search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: "Open Sans";
+    font-size: 21px;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 265px;
+    height: 38px;
+    padding: 10px 30px;
+    border: 2px solid #D4D7E1;
+    border-radius: 100px;
+    background-color: transparent;
+    outline: none;
+
+    &:focus {
+      border-color: rgb(43, 184, 194);
+    }
+  }
+
+  ::placeholder {
+    color: #A9AEC1;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="wrapper">
+
+  <header class="wrapper__search-bar">
+    <div class="wrapper__item">
+      <h1 class="wrapper__title">Servers</h1>
+      <h2 class="wrapper__subtitle">Number of elements: {{filteredServers?.length}}</h2>
+    </div>
+    <input class="wrapper__item wrapper__input" type="text" placeholder="Search" (input)="findServer($event)">
+  </header>
+  <app-table-rows [servers]='filteredServers'></app-table-rows>
+
+</div>

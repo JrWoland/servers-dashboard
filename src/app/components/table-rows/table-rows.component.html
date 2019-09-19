@@ -1,0 +1,19 @@
+<div class="table">
+  <header class="table__header">
+    <div class="table__row">
+      <div class="table__row__item table__row__name">Name</div>
+      <div class="table__row__item table__row__status">Status</div>
+      <div class="table__row__item table__row__change-status">Change status</div>
+    </div>
+  </header>
+  <div class="table__body">
+    <div [@flyInOut]='server' class="table__row" *ngFor="let server of servers">
+      <div class="table__row__item table__row__item--font table__row__name">{{server.name}}
+      </div>
+      <div [ngClass]="setClass(server)" class="table__row__item table__row__item--font table__row__status">
+        {{server.status}} <span *ngIf="server.status === 'REBOOTING'">...</span></div>
+      <app-change-status [serverToChange]='server'
+        class="table__row__item table__row__item--font table__row__change-status"></app-change-status>
+    </div>
+  </div>
+</div>

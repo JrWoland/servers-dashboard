@@ -1,0 +1,33 @@
+.nav {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  background-color: #494E61;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+
+  &__item {
+    position: relative;
+    margin: 0 50px 0;
+    font-size: 14px;
+    line-height: 2rem;
+    height: 35px;
+    padding: 0 20px 0;
+    border-right: 2px solid #757B8F;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -60%);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 2px solid #7D82F7;
+    }
+  }
+
+}

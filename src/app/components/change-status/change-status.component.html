@@ -1,0 +1,9 @@
+<div class="menu">
+  <img (click)="displayMenu($event)" src="assets/icons/ellipsis-h-solid.svg" alt="">
+  <ul class="menu__list" [hidden]="!isMenuActive">
+    <div class="layer" (click)="displayMenu($event)"></div>
+    <li class="menu__list__item" [hidden]="serverToChange.status === 'ONLINE'" (click)="turnOn($event)">Turn On</li>
+    <li class="menu__list__item" [hidden]="serverToChange.status === 'OFFLINE'" (click)="turnOff($event)">Turn Off</li>
+    <li class="menu__list__item" [hidden]="serverToChange.status === 'OFFLINE'" (click)="reboot($event)">Reboot</li>
+  </ul>
+</div>
